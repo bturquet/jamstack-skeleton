@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c8cb0999-20ae-4eac-865a-771fc21b845b/deploy-status)](https://app.netlify.com/sites/eleventy-skeleton-btt/deploys)
+
 # JAMstack Skeleton
 
 A skeleton boilerplate built with Eleventy and Materializecss, linked to Netlify CMS and deployed on Netlify.
@@ -18,33 +20,36 @@ Node `>=` v8.9.0
 npm install
 ```
 
-`cd` into your project folder and type the `npm run dev` command into terminal, to start the development server and Gulp. Eleventy has baked in hot reloading and will files for changes.
+`cd` into your project folder and type the `npm run dev` command into terminal, to start the development server. Eleventy has baked in hot reloading and will files for changes.
 
 ## Folder Structure
 
-The `site` folder contains all the templates, pages and content, which Eleventy will watch and parse into HTML for us.
+The `views_source` folder contains all the templates, pages and content, which Eleventy will watch and parse into HTML for us.
 
 Within this, lives a `globals` folder, where you'll find a `site.json` file - for general site config stuff e.g name, author, email, social media...etc.
 
-A `navigation.json`, which we loop over in the template, to generate our nav and a `helpers.js` which just contains a simple environment helper.
+A `navigation.json` to generate our nav.
 
-Uncompiled SCSS and JS reside in the `resources` folder - Gulp will be watching these folders for any changes (you should restart the server when creating new partials).
-
-When in development mode, Skeleventy will use `main.css` as the stylesheet. This will be pretty chunky in filesize, due to it containing all of Tailwind's utility classes. Once you run the build command ready for deployment, Skeleventy will then reference the minified version of the stylesheet `main.min.css`.
-
-Purge will also run via the build command and will cross reference all of Tailwind's utility classes with your templates/HTML and will remove all the unused ones - pretty cool right?
+Static ressources folders as `css`, `images` and `js`.
 
 ## Customization
 
-The `views` folder contains all.
-The `globals` folder, where you can customize the navigation and the site info.
+Use the `views_source` \ `posts` folder and add a post by simply creating a Markdow.
+
+Or thanks to the Netlify CMS just go the `/admin` URL and create a new Post (need to be identified).
 
 ## Ready to deploy?
 
 Type the `npm run build` command to minify scripts, styles and run Purgecss.
 
-Feel free to adapt this as you wish! Go build some cool stuff and put it on Netlify - seriously it's the future!
+Feel free to adapt this as you wish! Go build some cool stuff and put it on Netlify !
 
 ## Deploy to Netlify
 
 [Netlify](https://www.netlify.com/)
+
+## Next Features in progress
+
+* PERFS | purge the CSS and recompile it by using gulp
+* PERFS | html minifier
+* UI/UX | preview template in the Netlify CMS

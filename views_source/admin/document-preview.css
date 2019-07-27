@@ -20,5 +20,6 @@ img {
 }
 
 a {
-  color: #2bbbad;
+  color: #0d47a1; /*#2bbbad;*/
+  text-decoration: none;
 }

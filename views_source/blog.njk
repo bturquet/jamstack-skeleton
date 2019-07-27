@@ -7,7 +7,7 @@ title: Blog
 ---
 
 <div class="container">
-<h1 class="header center orange-text">{{ site.name }} {{ title }} !</h1>
+<h1 class="header center black-text">{{ site.name }} {{ title }} !</h1>
   <div class="row">
     {% for post in collections.posts %}
       <div class="col s12 m6">
@@ -23,7 +23,7 @@ title: Blog
           <div class="card-reveal">
             <span class="card-title grey-text text-darken-4">{{ post.data.title }}<i class="material-icons right">close</i></span>
             <p>{{ post.data.excerpt }}</p>
-            <a class="block text-blue-darker waves-effect waves-light btn" href="{{ post.url }}">READ</a>
+            <a class="block text-blue-darker waves-effect waves-light btn blue darken-4" href="{{ post.url }}">READ</a>
           </div>
         </div>
       </div>

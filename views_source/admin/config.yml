@@ -6,7 +6,7 @@ backend:
 publish_mode: editorial_workflow
 
 site_url: /
-display_url: https://condescending-wright-910f0c.netlify.com/
+display_url: https://eleventy-skeleton-btt.netlify.com/
 
 commit_messages:
     create: Create {{collection}} “{{slug}}”

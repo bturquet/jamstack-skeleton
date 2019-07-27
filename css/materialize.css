@@ -2606,7 +2606,7 @@ ul:not(.browser-default) > li {
 }
 
 a {
-  color: #2bbbad; /*#039be5;*/
+  color: #0d47a1; /*#12283a; #2bbbad; #039be5;*/
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
