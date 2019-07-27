@@ -1,0 +1,1 @@
+CMS.registerPreviewStyle("document-preview.css");
