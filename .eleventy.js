@@ -10,6 +10,9 @@ module.exports = eleventyConfig => {
    eleventyConfig.addLayoutAlias('page', 'layouts/page.njk')
    eleventyConfig.addLayoutAlias('post', 'layouts/post.njk')
 
+   // Include admin for Netlify CMS
+   eleventyConfig.addPassthroughCopy("views_source/admin/")
+
    // Include our static assets
    eleventyConfig.addPassthroughCopy("css")
    eleventyConfig.addPassthroughCopy("js")
@@ -21,7 +24,7 @@ module.exports = eleventyConfig => {
         htmlTemplateEngine: 'njk',
 
       dir: {
-        input: "views",
+        input: "views_source",
         output: "dist",
         includes: '_includes',
         data: 'globals'

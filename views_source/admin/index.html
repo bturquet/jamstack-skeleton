@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netlify CMS - Admin</title>
+</head>
+<body>
+  <!-- Include the script that builds the page and powers Netlify CMS -->
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <!-- Include Netlify Identity for authentication -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!--   -- >
+    <script>
+      var PostPreview = createClass({
+        render: function() {
+          var entry = this.props.entry;
+          var image = entry.getIn(['data', 'image']);
+          var bg = this.props.getAsset(image);
+          return h('div', {},
+            h('h1', {}, entry.getIn(['data', 'title'])),
+            h('img', {src: bg.toString()}),
+            h('div', {"className": "text"}, this.props.widgetFor('body'))
+          );
+        }
+      });
+
+      CMS.registerPreviewTemplate("posts", PostPreview);
+      CMS.registerPreviewStyle("/css/style.css");
+    </script>
+</body>
+</html>

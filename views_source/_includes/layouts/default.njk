@@ -65,8 +65,9 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Built with <a class="orange-text text-lighten-3" href="http://11ty.io" target="_blank">11ty</a> and
-      <a class="orange-text text-lighten-3" href="http://materializecss.com" target="_blank">Materialize</a>
+      Made with <a class="orange-text text-lighten-3" href="http://11ty.io" target="_blank">11ty</a> and
+      <a class="orange-text text-lighten-3" href="http://materializecss.com" target="_blank">Materialize</a>,
+      by <a class="orange-text text-lighten-3" href="https://github.com/bturquet" target="_blank">Baptiste Turquet</a>
       </div>
     </div>
   </footer>
@@ -81,6 +82,17 @@
     $(document).ready(function(){
       $('.tap-target').tapTarget();
     });
+  </script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
   </script>
   </body>
 </html>
