@@ -16,4 +16,4 @@ var PostPreview = createClass({
   });
 
 CMS.registerPreviewStyle("document-preview.css");
-CMS.registerPreviewTemplate("posts", PostPreview);
+CMS.registerPreviewTemplate("views_surce/posts", PostPreview);

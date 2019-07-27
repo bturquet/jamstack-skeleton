@@ -5,8 +5,8 @@ backend:
 # Uncomment below to enable drafts
 publish_mode: editorial_workflow
 
-site_url: https://condescending-wright-910f0c.netlify.com/
-display_url: Site
+site_url: /
+display_url: https://condescending-wright-910f0c.netlify.com/
 
 commit_messages:
     create: Create {{collection}} “{{slug}}”
