@@ -1,0 +1,17 @@
+{
+  "name": "eleventy-sample",
+  "version": "0.9.0",
+  "description": "A JAMstack skeleton built with Eleventy and Materializecss, linked to Netlify CMS and deployed on Netlify.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx @11ty/eleventy --serve",
+		"build": "eleventy"
+  },
+  "keywords": ["eleventy", "11ty", "materializecss", "netlifycms", "netlify"],
+  "author": "Baptiste Turquet",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.8.3"
+  }
+}

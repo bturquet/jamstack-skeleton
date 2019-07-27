@@ -1,0 +1,32 @@
+---
+layout: default
+meta_title: Blog
+meta_description: Blog
+body_class: home
+title: Blog
+---
+
+<div class="container">
+<h1 class="header center orange-text">{{ site.name }} {{ title }} !</h1>
+  <div class="row">
+    {% for post in collections.posts %}
+      <div class="col s12 m6">
+        <div class="card medium hoverable">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img src="{{ post.data.featured_image }}" alt="{{ post.data.image_caption }}" class="activator">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">{{ post.data.title }}<i class="material-icons right">more_vert</i></span>
+            <p><a class="block text-blue-darker" href="{{ post.url }}">{{ post.data.title }}</a></p>
+            <p>{{ post.date }}</p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">{{ post.data.title }}<i class="material-icons right">close</i></span>
+            <p>{{ post.data.excerpt }}</p>
+            <a class="block text-blue-darker waves-effect waves-light btn" href="{{ post.url }}">READ</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

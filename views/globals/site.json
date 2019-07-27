@@ -1,0 +1,23 @@
+{
+    "name": "Your company",
+    "title": "Html Title",
+    "shortname": "Shortname",
+    "url": "",
+    "author": {
+        "name": "FirstName  LastName",
+        "description": "I like coding, creating websites, design, outdoors, and cool other stuff ! Feel free to share  a beer !",
+        "email": "baptiste.turquet@example.com",
+        "handle": "@baptisteturquet",
+        "avatar": "/images/blog/author.jpg"
+    },
+    "images": {
+        "favicon": "/images/favicon.ico",
+        "twitter": "/images/meta/twitter.jpg",
+        "og": "/images/meta/og.jpg"
+    },
+    "social_links": {
+        "facebook": "https://www.facebook.com",
+        "twitter": "https://www.twitter.com",
+        "linkedin": "https://www.linkedin.com"
+    }
+}

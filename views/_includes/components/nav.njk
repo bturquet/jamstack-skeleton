@@ -1,0 +1,8 @@
+{% for item in navigation.main %}
+<li>
+    <a href="{{ item.url | safe }}" class="">{{ item.label }}</a>
+</li>
+{% endfor %}
+<li>
+    <a class="" href="https://github.com/bturquet/jamstack-btt" target="_blank" rel="noopener">Download</a>
+</li>
