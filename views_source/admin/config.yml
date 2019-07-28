@@ -20,7 +20,7 @@ media_folder: "images/uploads" # Media files will be stored in the repo under im
 collections:
   # Our blog posts
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Post" # Used in the UI
+    label: "Posts" # Used in the UI
     folder: "views_source/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -38,7 +38,7 @@ collections:
     label: "Menu"
     files:
       - file: "views_source/pages/navbar.md"
-        label: "navbar"
+        label: "Navigation"
         name: "Navbar"
         slug: "{{slug}}"
         fields:
@@ -56,11 +56,11 @@ collections:
            }
   # Pages
   - name: "pages"
-    label: "Page"
+    label: "Pages"
     files:
-      - file: "views_source/about.njk"
-        label: "about"
-        name: "About"
+      - file: "views_source/pages/test.md"
+        label: "Test"
+        name: "Test"
         slug: "{{slug}}"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "default" }
