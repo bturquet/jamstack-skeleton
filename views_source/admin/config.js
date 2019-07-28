@@ -1,5 +1,3 @@
-import React from "react";
-
 var PostPreview = createClass({
     render: function() {
       var entry = this.props.entry;

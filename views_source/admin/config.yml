@@ -3,7 +3,7 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 
 # Uncomment below to enable drafts
-publish_mode: editorial_workflow
+# publish_mode: editorial_workflow
 
 site_url: /
 display_url: https://eleventy-skeleton-btt.netlify.com/
@@ -26,21 +26,23 @@ collections:
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Publish Date", name: "date", widget: "date" }
       - { label: "Category", name: "category", widget: "string"}
       - { label: "Featured Image", name: "featured_image", widget: "image"}
       - { label: "Image Caption (displayed on the card reveal)", name: "image_caption", widget: "string"}
       - { label: "Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Tags", name: "tags_others", widget: "list"}
       - { label: "Body", name: "body", widget: "markdown" }
-  # Our pages e.g. About
-  - name: "pages"
-    label: "Page"
+  # Navigation
+  - name: "navigation"
+    label: "Menu"
     files:
       - file: "views_source/pages/navbar.md"
         label: "navbar"
         name: "Navbar"
         slug: "{{slug}}"
         fields:
+          - { label: "Tags", name: "tags", widget: "hidden", default: "nav" }
           - { 
               label: "Menu Items",
               name: "menuItems",
@@ -52,3 +54,18 @@ collections:
                   { label: "Link URL", name: "url", widget: "string", hint: "Use a relative URL (e.g. /about) if the link is an internal link." },
                 ],
            }
+    # Pages
+    - name: "pages"
+      label: "Page"
+      files:
+        - file: "views_source/about.njk"
+          label: "about"
+          name: "About"
+          slug: "{{slug}}"
+          fields:
+            - { label: "Layout", name: "layout", widget: "hidden", default: "default" }
+            - { label: "Meta Title", name: "meta_title", widget: "string" }
+            - { label: "Meta Desc", name: "meta_description", widget: "string" }
+            - { label: "Body", name: "body_class", widget: "string" }
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Body", name: "body", widget: "markdown" }
