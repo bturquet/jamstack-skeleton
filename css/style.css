@@ -31,3 +31,37 @@ h4, h2, h1, h3, body {
 .sidenav {
   padding: 50px 50px 50px 50px;
 }
+
+.tap-target {
+  background-color: orange;
+}
+
+/* label color */
+.input-field label {
+  color: #000;
+}
+
+/*TEXT*/
+/* label focus color */
+.input-field input[type="text"]:focus:not([readonly]) + label, .input-field input[type="email"]:focus:not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: #e65100;
+}
+/* label underline focus color */
+.input-field input[type="text"]:focus:not([readonly]), .input-field input[type="email"]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #e65100;
+  box-shadow: 0 1px 0 0 #e65100;
+}
+/* valid color */
+.input-field input[type="text"]:not([readonly]).valid, .input-field input[type="email"]:not([readonly]).valid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* invalid color */
+.input-field input[type="text"]:not([readonly]).invalid, .input-field input[type="email"]:not([readonly]).invalid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #000;
+}

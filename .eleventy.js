@@ -4,11 +4,15 @@ module.exports = eleventyConfig => {
    eleventyConfig.addCollection('posts', collection => {
     return collection.getFilteredByTag('posts').reverse()
    }) 
+   eleventyConfig.addCollection('nav', collection => {
+    return collection.getFilteredByTag('nav').reverse()
+   }) 
 
    // Layout aliases
    eleventyConfig.addLayoutAlias('default', 'layouts/default.njk')
    eleventyConfig.addLayoutAlias('page', 'layouts/page.njk')
    eleventyConfig.addLayoutAlias('post', 'layouts/post.njk')
+   eleventyConfig.addLayoutAlias('nav', 'components/nav.njk')
 
    // Include admin for Netlify CMS
    eleventyConfig.addPassthroughCopy("views_source/admin/")

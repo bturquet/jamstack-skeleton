@@ -33,15 +33,22 @@ collections:
       - { label: "Excerpt", name: "excerpt", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
   # Our pages e.g. About
-  # - name: "pages"
-  #   label: "Page"
-  #   folder: "pages"
-  #   create: false # Change to true to allow editors to create new pages
-  #   slug: "{{slug}}"
-  #   fields:
-  #     - { label: "Title", name: "title", widget: "string" }
-  #     - { label: "Publish Date", name: "date", widget: "datetime" }
-  #     - { label: "Permalink", name: "permalink", widget: "string" }
-  #     - { label: "Navigation Title", name: "navtitle", widget: "string" }
-  #     - { label: "Tags", name: "tags", widget: "hidden", default: "nav" }
-  #     - { label: "Body", name: "body", widget: "markdown" }
+  - name: "pages"
+    label: "Page"
+    files:
+      - file: "views_source/pages/navbar.md"
+        label: "navbar"
+        name: "Navbar"
+        slug: "{{slug}}"
+        fields:
+          - { 
+              label: "Menu Items",
+              name: "menuItems",
+              widget: "list",
+              fields:
+                [
+                  { label: "Label", name: "label", widget: "string" },
+                  { label: "Link Type", name: "type", widget: "select", options: ["internal", "external"] },
+                  { label: "Link URL", name: "url", widget: "string", hint: "Use a relative URL (e.g. /about) if the link is an internal link." },
+                ],
+           }

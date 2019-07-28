@@ -3,6 +3,13 @@
     <a href="{{ item.url | safe }}" class="">{{ item.label }}</a>
 </li>
 {% endfor %}
+{% for items in collections.nav %}
+    {% for item in items.data.menuItems %}
+    <li>
+        <a href="{{ item.url }}" class="">{{ item.label }}</a>
+    </li>
+    {% endfor %}
+{% endfor %}
 <li>
     <a class="btn waves-effect waves-light orange darken-4" href="https://github.com/bturquet/jamstack-skeleton" target="_blank" rel="noopener">Download</a>
 </li>
