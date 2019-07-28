@@ -54,18 +54,18 @@ collections:
                   { label: "Link URL", name: "url", widget: "string", hint: "Use a relative URL (e.g. /about) if the link is an internal link." },
                 ],
            }
-    # Pages
-    - name: "pages"
-      label: "Page"
-      files:
-        - file: "views_source/about.njk"
-          label: "about"
-          name: "About"
-          slug: "{{slug}}"
-          fields:
-            - { label: "Layout", name: "layout", widget: "hidden", default: "default" }
-            - { label: "Meta Title", name: "meta_title", widget: "string" }
-            - { label: "Meta Desc", name: "meta_description", widget: "string" }
-            - { label: "Body", name: "body_class", widget: "string" }
-            - { label: "Title", name: "title", widget: "string" }
-            - { label: "Body", name: "body", widget: "markdown" }
+  # Pages
+  - name: "pages"
+    label: "Page"
+    files:
+      - file: "views_source/about.njk"
+        label: "about"
+        name: "About"
+        slug: "{{slug}}"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "default" }
+          - { label: "Meta Title", name: "meta_title", widget: "string" }
+          - { label: "Meta Desc", name: "meta_description", widget: "string" }
+          - { label: "Body", name: "body_class", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
